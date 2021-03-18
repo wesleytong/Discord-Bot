@@ -45,8 +45,27 @@ async def roulette(ctx, bet, amount):
     winning = random.randint(0,1)
     embedded = discord.Embed()
     if winning == 0 and bet == 'black':
-        embedded.add_field
-    await ctx.send('yeet')
+        embedded.set_author(name = ctx.author.name + '\'s Winning game', icon_url=str(ctx.author.avatar_url))
+        embedded.color = discord.Colour.green()
+        embedded.description = 'You won ' + '**' + str(int(amount) * 2) + '**'
 
+    elif winning == 1 and bet == 'red':
+        embedded.set_author(name = ctx.author.name + '\'s Winning game', icon_url=str(ctx.author.avatar_url))
+        embedded.color = discord.Colour.green()
+        embedded.description = 'You won ' + '**' + str(int(amount) * 2) + '**'
+
+    else:
+        embedded.set_author(name = ctx.author.name + '\'s Losing game', icon_url=str(ctx.author.avatar_url))
+        embedded.color = discord.Colour.red()
+        embedded.description = 'You lost ' + '**' + amount + '**'
+
+
+    await ctx.send(embed=embedded)
+
+def deposit(id:int, amount:int):
+    # TODO: Implement deposit
+
+def withdraw(id:int, amount:int):
+    # TODO: Implement withdraw
 
 bot.run(botToken.token)
