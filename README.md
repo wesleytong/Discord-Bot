@@ -1,4 +1,4 @@
-Currently a work in progress. 
+Currently a work in progress. Maintained by @wesleytong and @gabelee75, two Computer Science students currently studying @ UC Santa Cruz. 
 
 Bot for the popular Voice and Text Channel Discord. Currently used for administrative tasks and creating in-house games. 
 
